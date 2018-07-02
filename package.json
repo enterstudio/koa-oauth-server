@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "jshint .",
-    "test": "NODE_ENV=test ./node_modules/.bin/mocha 'test/**/*.js'"
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha 'test/**/*.js'",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -23,7 +25,8 @@
   "license": "MIT",
   "dependencies": {
     "co": "^4.5.1",
-    "oauth2-server": "seegno-forks/node-oauth2-server#enhancement/refactor-project"
+    "oauth2-server": "seegno-forks/node-oauth2-server#enhancement/refactor-project",
+    "snyk": "^1.88.0"
   },
   "devDependencies": {
     "co-mocha": "^1.1.0",
@@ -38,5 +41,6 @@
   },
   "engines": {
     "node": ">=0.11"
-  }
+  },
+  "snyk": true
 }
